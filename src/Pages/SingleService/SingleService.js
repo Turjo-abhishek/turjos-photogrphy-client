@@ -16,13 +16,15 @@ const SingleService = () => {
     const review = form.review.value;
     const photourl = user?.photoURL;
     const userName = user?.displayName;
+    const email = user?.email;
 
     const userReview = {
       review: review,
       serviceName: title,
       photourl,
       userName,
-      service: _id
+      service: _id,
+      email
     };
 
     fetch("http://localhost:5000/reviews", {
@@ -45,8 +47,10 @@ const SingleService = () => {
   useEffect(() => {
     fetch(`http://localhost:5000/reviews?service=${_id}`)
     .then(res => res.json())
-    .then(data => setReviewData(data))
-  },[])
+    .then(data => {
+        setReviewData(data)
+    })
+  },[_id])
 
 
 

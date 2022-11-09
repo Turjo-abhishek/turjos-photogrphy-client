@@ -4,6 +4,7 @@ import Main from '../../Layout/Main';
 import Allservices from '../../Pages/Allservices/Allservices';
 import Home from '../../Pages/Home/Home/Home';
 import Login from '../../Pages/Login/Login';
+import Myreviews from '../../Pages/Myreviews/Myreviews';
 import Signup from '../../Pages/Signup/Signup';
 import SingleService from '../../Pages/SingleService/SingleService';
 
@@ -33,6 +34,10 @@ const Routes = createBrowserRouter([
                 path: '/services/:id',
                 element: <SingleService></SingleService>,
                 loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`) 
+            },
+            {
+                path: '/myreviews',
+                element: <Myreviews></Myreviews>
             }
         ]
     }
