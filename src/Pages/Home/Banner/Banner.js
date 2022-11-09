@@ -7,11 +7,12 @@ import BannerCard from "./BannerCard";
 
 
 
+
 const bannerItems = [
     {
         image: img1,
         id: 1,
-        previous: 5,
+        previous: 4,
         next: 2
     },
     {
