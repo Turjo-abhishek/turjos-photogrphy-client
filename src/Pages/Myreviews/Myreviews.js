@@ -35,8 +35,11 @@ const Myreviews = () => {
 
 
     return (
-        <div className='grid grid-cols-3 gap-5 my-10'>
+        <div className={`${serviceReviews.length === 0 ? "my-10" : "grid grid-cols-3 gap-5 my-10"}`}>
             {
+                serviceReviews.length === 0 ?
+                <p className='text-center font-bold text-4xl'>No Reviews were added</p>
+                :
                 serviceReviews.map(singleServiceReview => <SingleMyReview key={singleServiceReview._id} singleServiceReview={singleServiceReview} handleDelete={handleDelete}></SingleMyReview>)
             }
         </div>
