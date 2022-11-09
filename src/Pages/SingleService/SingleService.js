@@ -22,6 +22,7 @@ const SingleService = () => {
       serviceName: title,
       photourl,
       userName,
+      service: _id
     };
 
     fetch("http://localhost:5000/reviews", {
@@ -42,10 +43,10 @@ const SingleService = () => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:5000/reviews')
+    fetch(`http://localhost:5000/reviews?service=${_id}`)
     .then(res => res.json())
     .then(data => setReviewData(data))
-  },[reviewdata])
+  },[])
 
 
 
@@ -59,7 +60,6 @@ const SingleService = () => {
           <img
             src={img}
             className="rounded-lg"
-            //   style={{ height: "250px" }}
             alt=""
           />
         </figure>
