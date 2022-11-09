@@ -13,7 +13,7 @@ const About = () => {
             />
           </div>
           <div className="w-1/2">
-            <h1 className="text-2xl font-bold text-orange-600 mb-6">
+            <h1 className="text-2xl font-bold text-indigo-600 mb-6">
               About Me
             </h1>
             <h1 className="text-5xl font-bold leading-tight">
@@ -26,7 +26,7 @@ const About = () => {
               add films. Recently I have covered a lot of wedding shoots and
               have vast experience in portrait also.
             </p>
-            <button className="btn btn-outline text-orange-600">Book Appointment</button>
+            <button className="btn btn-outline text-indigo-600">Book Appointment</button>
           </div>
         </div>
       </div>
