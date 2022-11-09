@@ -23,7 +23,7 @@ const ServiceCard = ({ service }) => {
             </p>
             <p className=" text-lg font-semibold flex items-center justify-end gap-2"><span className=" text-yellow-400">Rating:</span>  {rating}  <FaStar className="text-yellow-400"></FaStar></p>
           </div>
-          <p className="text-justify my-3">{description.slice(0, 200)}...</p>
+          <p className="text-justify my-3">{description.slice(0, 150)}...</p>
           <div className="card-actions justify-start">
             <Link to={`/services/${_id}`}>
               <button className="btn btn-outline btn-primary">View Details</button>
