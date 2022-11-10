@@ -1,8 +1,12 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const Blogs = () => {
   return (
     <div className="p-10 bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 my-10 grid grid-cols-1 gap-5">
+      <Helmet>
+        <title>Turjo's Photography - Blogs</title>
+      </Helmet>
       <div
         tabIndex={0}
         className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"

@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
+import { Helmet } from "react-helmet-async";
 
 const Signup = () => {
+  const {loading} = useContext(AuthContext);
   const { createUser, googleLogin } = useContext(AuthContext);
   const handleSignup = (event) => {
     event.preventDefault();
@@ -28,8 +30,28 @@ const Signup = () => {
       .catch((error) => console.error(error));
   };
 
+  if (loading) {
+    return (
+      <div class="flex justify-center items-center">
+        <div
+          class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full lg:w-1/3 mx-auto">
+      <Helmet>
+        <title>Turjo's Photography - Sign Up</title>
+        <meta
+          name="description"
+          content="Beginner friendly page for learning React Helmet."
+        />
+      </Helmet>
       <div className="hero-content gap-20  flex-col lg:flex-row py-20">
         <div className="card flex-shrink-0 w-full max-w-2xl shadow-2xl bg-base-100">
           <h1 className="text-4xl font-bold text-center pt-5">Sign Up</h1>

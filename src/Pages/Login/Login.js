@@ -2,28 +2,29 @@ import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
+  const {loading} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
   const from = location?.state?.from?.pathname || "/";
 
-
-    const { login, googleLogin } = useContext(AuthContext);
+  const { login, googleLogin } = useContext(AuthContext);
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
     login(email, password)
-    .then(result => {
+      .then((result) => {
         const user = result.user;
         console.log(user);
         form.reset();
         navigate(from, { replace: true });
-    })
-    .catch(error => console.log(error))
+      })
+      .catch((error) => console.log(error));
   };
 
   const handleGoogleLogin = () => {
@@ -35,8 +36,28 @@ const Login = () => {
       .catch((error) => console.error(error));
   };
 
+  if (loading) {
+    return (
+      <div class="flex justify-center items-center">
+        <div
+          class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full lg:w-1/3 mx-auto">
+      <Helmet>
+        <title>Turjo's Photography - Login</title>
+        <meta
+          name="description"
+          content="Beginner friendly page for learning React Helmet."
+        />
+      </Helmet>
       <div className="hero-content gap-20  flex-col lg:flex-row py-20">
         <div className="card flex-shrink-0 w-full max-w-2xl shadow-2xl bg-base-100">
           <h1 className="text-4xl font-bold text-center pt-5">Login</h1>

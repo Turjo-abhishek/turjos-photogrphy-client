@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
 import SingleReview from "./SingleReview";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const SingleService = () => {
   const [reviewdata, setReviewData] = useState([]);
@@ -55,6 +56,9 @@ const SingleService = () => {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <Helmet>
+        <title>Turjo's Photography - Service Reviews</title>
+      </Helmet>
       <div className="card card-compact w-full bg-base-100 shadow-xl mx-auto my-10">
         
         <figure>

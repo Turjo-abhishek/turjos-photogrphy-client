@@ -3,6 +3,7 @@ import { RouterProvider } from "react-router-dom";
 import "./App.css";
 import { Toaster } from 'react-hot-toast';
 import Routes from "./Router/Routes/Routes";
+import { Helmet } from "react-helmet-async";
 
 function App() {
   return (

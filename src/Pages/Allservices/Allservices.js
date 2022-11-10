@@ -1,11 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import {  useLoaderData } from "react-router-dom";
 import ServiceCard from "../Home/Services/ServiceCard";
 
 const Allservices = () => {
-  const allServices = useLoaderData();
+  const [loading, setLoading] = useState(true);
+  const [allServices, setAllServices] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/allservices`)
+    .then(res => res.json())
+    .then(data => {
+      setAllServices(data);
+      setLoading(false);
+    })
+  } ,[]);
+
+
+  if (loading) {
+    return (
+      <div class="flex justify-center items-center">
+        <div
+          class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
+
+
   return (
     <div className="my-20">
+      <Helmet>
+        <title>Turjo's Photography - Services</title>
+      </Helmet>
       <div className="text-center mb-12">
         <p className="font-bold text-2xl text-indigo-600 mb-5">Services</p>
         <h2 className="font-bold text-5xl mb-5">Available Packages</h2>
