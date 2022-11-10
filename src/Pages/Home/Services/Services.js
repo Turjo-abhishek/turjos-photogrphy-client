@@ -5,12 +5,18 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
   const [services, setServices] = useState([]);
+  const [limit, setLimit] = useState(3);
 
   useEffect(() => {
     fetch("http://localhost:5000/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+
+  const handleLimit = () => {
+    setLimit(0);
+  }
+  
   return (
     <div className="my-20">
       <div className="text-center mb-12">
@@ -28,7 +34,7 @@ const Services = () => {
         ))}
       </div>
       <div className="flex justify-center">
-        <Link to="/services"><button className="btn btn-outline btn-primary my-5 ">See All<FaArrowRight className="ml-2 w-3"></FaArrowRight></button></Link>
+        <Link to="/allservices"><button onClick={handleLimit} className="btn btn-outline btn-primary my-5 ">See All<FaArrowRight className="ml-2 w-3"></FaArrowRight></button></Link>
       </div>
       <hr />
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import toast from "react-hot-toast";
 
 const Addservice = () => {
   const handleSubmit = (event) => {
@@ -28,7 +29,7 @@ const Addservice = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          alert("service added");
+         toast.success('Service added successfully');
         }
         form.reset();
       })
