@@ -29,7 +29,7 @@ const SingleService = () => {
       email,
     };
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://assignment-11-server-murex.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -47,7 +47,7 @@ const SingleService = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?service=${_id}`)
+    fetch(`https://assignment-11-server-murex.vercel.app/reviews?service=${_id}`)
       .then((res) => res.json())
       .then((data) => {
         setReviewData(data);

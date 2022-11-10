@@ -21,7 +21,7 @@ const Addservice = () => {
       time: new Date().getTime(),
     };
 
-    fetch("http://localhost:5000/services", {
+    fetch("https://assignment-11-server-murex.vercel.app/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",

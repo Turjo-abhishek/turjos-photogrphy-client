@@ -9,7 +9,7 @@ const Myreviews = () => {
   const [serviceReviews, setServiceReviews] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myreviews?email=${user?.email}`)
+    fetch(`https://assignment-11-server-murex.vercel.app/myreviews?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setServiceReviews(data));
   }, [user?.email]);
@@ -17,7 +17,7 @@ const Myreviews = () => {
   const handleDelete = (id) => {
     const ifDelete = window.confirm("Are you sure to delete?");
     if (ifDelete) {
-      fetch(`http://localhost:5000/reviews/${id}`, {
+      fetch(`https://assignment-11-server-murex.vercel.app/reviews/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

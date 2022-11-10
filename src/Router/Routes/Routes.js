@@ -36,7 +36,7 @@ const Routes = createBrowserRouter([
             {
                 path: '/services/:id',
                 element: <SingleService></SingleService>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`) 
+                loader: ({params}) => fetch(`https://assignment-11-server-murex.vercel.app/services/${params.id}`) 
             },
             {
                 path: '/myreviews',

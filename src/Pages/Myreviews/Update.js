@@ -9,7 +9,7 @@ const Update = () => {
     const form = event.target;
     const userReview = form.review.value;
 
-    fetch(`http://localhost:5000/myreviews?_id=${click}`, {
+    fetch(`https://assignment-11-server-murex.vercel.app/myreviews?_id=${click}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
