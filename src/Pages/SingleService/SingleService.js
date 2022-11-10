@@ -25,7 +25,7 @@ const SingleService = () => {
       photourl,
       userName,
       service: _id,
-      email
+      email,
     };
 
     fetch("http://localhost:5000/reviews", {
