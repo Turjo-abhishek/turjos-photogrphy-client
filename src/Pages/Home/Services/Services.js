@@ -34,7 +34,7 @@ const Services = () => {
         ))}
       </div>
       <div className="flex justify-center">
-        <Link to="/allservices"><button onClick={handleLimit} className="btn btn-outline btn-primary my-5 ">See All<FaArrowRight className="ml-2 w-3"></FaArrowRight></button></Link>
+        <Link to="/services"><button onClick={handleLimit} className="btn btn-outline btn-primary my-5 ">See All<FaArrowRight className="ml-2 w-3"></FaArrowRight></button></Link>
       </div>
       <hr />
     </div>

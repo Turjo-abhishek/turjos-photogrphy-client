@@ -30,7 +30,7 @@ const ServiceCard = ({ service }) => {
                 <FaStar className="text-yellow-400"></FaStar>
               </p>
             </div>
-            <p className="text-justify my-3">{description.slice(0, 150)}...</p>
+            <p className="text-justify my-3">{description.slice(0, 100)}...</p>
             <div className="card-actions justify-start">
               <Link to={`/services/${_id}`}>
                 <button className="btn btn-outline btn-primary">

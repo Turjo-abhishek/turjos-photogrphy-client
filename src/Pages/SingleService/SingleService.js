@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
 import SingleReview from "./SingleReview";
+import toast from "react-hot-toast";
 
 const SingleService = () => {
     const [reviewdata, setReviewData] = useState([]);
@@ -37,7 +38,7 @@ const SingleService = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
-          alert("review added");
+          toast.success("review added successfully");
         }
         form.reset();
       })
