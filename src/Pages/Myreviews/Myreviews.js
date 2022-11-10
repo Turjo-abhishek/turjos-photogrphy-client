@@ -8,7 +8,7 @@ const Myreviews = () => {
   const [serviceReviews, setServiceReviews] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+    fetch(`http://localhost:5000/myreviews?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setServiceReviews(data));
   }, [user?.email]);
@@ -32,7 +32,7 @@ const Myreviews = () => {
 
 
     return (
-        <div className={`${serviceReviews.length === 0 ? "my-10" : "grid grid-cols-3 gap-5 my-10"}`}>
+        <div className={`${serviceReviews.length === 0 ? "my-10" : "grid text-center grid-cols-1 lg:grid-cols-3 gap-5 my-10"}`}>
             {
                 serviceReviews.length === 0 ?
                 <p className='text-center font-bold text-4xl'>No Reviews were added</p>

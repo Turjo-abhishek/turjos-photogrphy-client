@@ -21,12 +21,12 @@ const BannerCard = ({ slider }) => {
           ❯
         </a>
       </div>
-      <div className="absolute flex justify-end transform -translate-y-1/2 gap-3 left-44 top-1/3">
-        <h1 className="text-white font-bold leading-none text-6xl ">
+      <div className="absolute flex justify-end transform -translate-y-1/2 gap-3 left-24 lg:left-44 top-1/3">
+        <h1 className="text-white font-bold leading-none text-4xl lg:text-6xl">
           Create Memories <br /> With Turjo's <br /> Photography
         </h1>
       </div>
-      <div className="absolute flex justify-end transform -translate-y-1/2 gap-3 w-2/5 left-44 top-2/4 mt-8">
+      <div className="absolute flex justify-end transform -translate-y-1/2 gap-3 w-2/5 left-24 lg:left-44 top-2/4 mt-8">
         <p className="text-white text-xl ">
           Do you wish to relive your best moments? Book my packages. Services available for wedding photography to portrait and many more....
         </p>

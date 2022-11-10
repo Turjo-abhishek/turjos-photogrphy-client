@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const SingleMyReview = ({ singleServiceReview, handleDelete }) => {
   const { serviceName, review, _id } = singleServiceReview;
   return (
-    <div className="card w-96 bg-neutral text-neutral-content">
+    <div className="card w-96 bg-neutral text-neutral-content mx-auto">
       <div className="card-body items-center text-center">
         <h2 className="card-title">Service Name: {serviceName}</h2>
         <p>Review: {review}</p>

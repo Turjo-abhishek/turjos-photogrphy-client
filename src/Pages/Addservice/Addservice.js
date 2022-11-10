@@ -6,14 +6,14 @@ const Addservice = () => {
     event.preventDefault();
     const form = event.target;
     const title = form.title.value;
-    const photoURL = form.photoURL.value;
+    const img = form.photoURL.value;
     const price = form.price.value;
     const rating = form.rating.value;
     const description = form.description.value;
 
     const service = {
       title,
-      photoURL,
+      img,
       price,
       rating,
       description,

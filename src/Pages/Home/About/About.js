@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="hero mb-10 mt-24">
         <div className="hero-content flex-col lg:flex-row">
-          <div className="w-1/2">
+          <div className="lg:w-1/2">
             <img
               src={image}
               alt=""
