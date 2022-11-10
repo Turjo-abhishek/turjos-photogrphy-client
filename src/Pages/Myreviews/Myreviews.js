@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
@@ -22,10 +22,10 @@ const Myreviews = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          if (data.deletedCount > 0) {
+          if (data?.deletedCount > 0) {
             toast.error("deleted order successfully");
             const remaining = serviceReviews.filter(
-              (order) => order._id !== id
+              (order) => order?._id !== id
             );
             setServiceReviews(remaining);
           }
@@ -36,7 +36,7 @@ const Myreviews = () => {
   return (
     <div
       className={`${
-        serviceReviews.length === 0
+        serviceReviews?.length === 0
           ? "my-10"
           : "grid text-center grid-cols-1 lg:grid-cols-3 gap-5 my-10"
       }`}

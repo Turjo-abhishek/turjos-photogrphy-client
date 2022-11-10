@@ -47,9 +47,8 @@ const Routes = createBrowserRouter([
                 element: <PrivateRoute><Addservice></Addservice></PrivateRoute>
             },
             {
-                path: '/update/:id',
-                element: <Update></Update>,
-                loader: ({params}) => fetch(`http://localhost:5000/reviews/${params.id}`) 
+                path: '/update',
+                element: <Update></Update>
             },
             {
                 path: '/blogs',

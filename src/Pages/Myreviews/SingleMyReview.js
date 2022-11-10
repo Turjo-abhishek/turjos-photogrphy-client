@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Contexts/Authprovider/Authprovider";
 
 const SingleMyReview = ({ singleServiceReview, handleDelete }) => {
+  const {setClick} = useContext(AuthContext);
   const { serviceName, review, _id } = singleServiceReview;
   return (
     <div className="card w-96 bg-neutral text-neutral-content mx-auto">
@@ -14,8 +17,8 @@ const SingleMyReview = ({ singleServiceReview, handleDelete }) => {
           >
             Delete
           </button>
-          <Link to={`/update/${_id}`}>
-            <button className="btn btn-warning btn-outline">Update</button>
+          <Link to="/update">
+            <button onClick={() => setClick(_id)} className="btn btn-warning btn-outline">Update</button>
           </Link>
         </div>
       </div>
