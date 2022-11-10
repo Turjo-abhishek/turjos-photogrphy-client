@@ -75,7 +75,7 @@ const Header = () => {
             {menuItems}
           </ul>
         </div>
-        <Link className="btn btn-ghost normal-case text-xl">
+        <Link className="btn btn-ghost normal-case text-xl" to="/">
           <img width={80} src={logo} alt="" />
           <span>Turjo's Photography</span>
         </Link>
@@ -84,8 +84,8 @@ const Header = () => {
         <ul className="menu menu-horizontal p-0 font-semibold">{menuItems}</ul>
       </div>
       <div className="navbar-end">
-        <Link>
-          <button className="btn btn-ghost">Contact Me</button>
+        <Link to="blogs">
+          <button className="btn btn-ghost">Blogs</button>
         </Link>
       </div>
     </div>

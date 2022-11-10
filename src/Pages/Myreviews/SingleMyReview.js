@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const SingleMyReview = ({ singleServiceReview, handleDelete }) => {
   const { serviceName, review, _id } = singleServiceReview;
@@ -8,8 +8,15 @@ const SingleMyReview = ({ singleServiceReview, handleDelete }) => {
         <h2 className="card-title">Service Name: {serviceName}</h2>
         <p>Review: {review}</p>
         <div className="card-actions justify-end">
-          <button onClick={() => handleDelete(_id)} className="btn btn-info btn-outline">Delete</button>
-          <button className="btn btn-warning btn-outline">Update</button>
+          <button
+            onClick={() => handleDelete(_id)}
+            className="btn btn-info btn-outline"
+          >
+            Delete
+          </button>
+          <Link to={`/update/${_id}`}>
+            <button className="btn btn-warning btn-outline">Update</button>
+          </Link>
         </div>
       </div>
     </div>

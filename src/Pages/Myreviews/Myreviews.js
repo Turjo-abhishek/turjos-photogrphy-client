@@ -8,11 +8,7 @@ const Myreviews = () => {
   const [serviceReviews, setServiceReviews] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
-      headers: {
-        authorization: `Bearer ${localStorage.getItem('genius-token')}`
-      }
-    })
+    fetch(`http://localhost:5000/reviews?email=${user?.email}`)
       .then((res) => res.json())
       .then((data) => setServiceReviews(data));
   }, [user?.email]);
