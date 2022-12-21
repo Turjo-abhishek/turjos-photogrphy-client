@@ -14,15 +14,15 @@ const BannerCard = ({ slider }) => {
         />
       </div>
       <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-        <a href={`#slide${previous}`} className="btn-ghost text-8xl text-white">
+        <a href={`#slide${previous}`} className="btn-ghost text-4xl lg:text-8xl text-white">
           ❮
         </a>
-        <a href={`#slide${next}`} className="btn-ghost text-8xl text-white">
+        <a href={`#slide${next}`} className="btn-ghost text-4xl lg:text-8xl text-white">
           ❯
         </a>
       </div>
       <div className="absolute flex justify-end transform -translate-y-1/2 gap-3 left-24 lg:left-44 top-1/3">
-        <h1 className="text-white font-bold leading-none text-4xl lg:text-6xl">
+        <h1 className="text-white font-bold leading-none text-3xl mb-8 lg:mb-0 lg:text-6xl">
           Create Memories <br /> With Turjo's <br /> Photography
         </h1>
       </div>
