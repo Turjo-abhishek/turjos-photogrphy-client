@@ -12,8 +12,8 @@ const ServiceCard = ({ service }) => {
           <PhotoView src={img}>
             <img
               src={img}
-              className="rounded-lg"
-              style={{ height: "250px" }}
+              className="w-full p-3"
+              style={{ height: "250px", borderRadius: "25px" }}
               alt=""
             />
           </PhotoView>

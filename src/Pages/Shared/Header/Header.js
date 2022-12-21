@@ -45,6 +45,9 @@ const Header = () => {
           </li>
         </>
       )}
+      <Link to="blogs">
+          <button className="btn btn-ghost">Blogs</button>
+        </Link>
     </>
   );
 
@@ -80,14 +83,14 @@ const Header = () => {
           <span>Turjo's Photography</span>
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal p-0 font-semibold">{menuItems}</ul>
       </div>
-      <div className="navbar-end">
+      {/* <div className="navbar-end">
         <Link to="blogs">
           <button className="btn btn-ghost">Blogs</button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
