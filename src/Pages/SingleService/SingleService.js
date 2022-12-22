@@ -67,7 +67,7 @@ const SingleService = () => {
         <div className="card-body">
           <h2 className="card-title font-bold text-2xl">{title}</h2>
           <div>
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col items-start lg:flex-row lg:justify-between lg:items-center">
               <p className="text-lg font-semibold">
                 <span className=" text-yellow-400">Price:</span> ${price}
               </p>

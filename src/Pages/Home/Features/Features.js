@@ -7,7 +7,7 @@ import { TbReportMoney } from "react-icons/tb";
 const Features = () => {
   return (
     <div className="my-16">
-        <h1 className="text-5xl text-center font-bold mb-16">Why Choose Me?</h1>
+        <h1 className="text-3xl lg:text-5xl text-center font-bold mb-16">Why Choose Me?</h1>
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 my-10">
         <div className="flex justify-center flex-col items-center gap-4">
           <FaCamera className="text-6xl text-sky-600"></FaCamera>
